@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  --fw-bold: 700;
+  --fw-normal: 400;
+  --clr: #b7c9e5;
+  --font-clr: #333;
+  --card-width: min(500px, 80%);
+  --card-height: 70vh;
+  font-family: "Oswald", sans-serif;
+}
+
+.body--index {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  color: var(--font-clr);
+}
+
+.flip-card {
+  position: relative;
+  width: var(--card-width);
+  height: var(--card-height);
+  -webkit-perspective: 2000px;
+          perspective: 2000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-card:hover .card-front {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+}
+
+.flip-card:hover .card-back {
+  -webkit-transform: rotateY(1turn);
+          transform: rotateY(1turn);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+  text-align: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 3s;
+  transition: -webkit-transform 3s;
+  transition: transform 3s;
+  transition: transform 3s, -webkit-transform 3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-front {
+  background: var(--clr);
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+}
+
+.card-front::before {
+  --spacer: 1.2em;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  content: "";
+  position: absolute;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 5px solid var(--font-clr);
+  -webkit-transform: var(--level-one);
+          transform: var(--level-one);
+}
+
+.card-back {
+  -webkit-transform: rotateY(0.5turn);
+          transform: rotateY(0.5turn);
+  color: var(--clr);
+  background: #b7c9e5;
+}
+
+.card__title {
+  font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  -webkit-transform: var(--level-three);
+          transform: var(--level-three);
+  font-weight: var(--fw-bold);
+  margin-top: 1em;
+}
+
+.card__subtitle {
+  width: 80%;
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  -webkit-transform: var(--level-two);
+          transform: var(--level-two);
+}
+
+.card__sentence {
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  -webkit-transform: var(--level-two);
+          transform: var(--level-two);
+  background-image: linear-gradient(45deg, #1f2932, #333);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: 1.2px;
+}
+
+.card__btn {
+  text-decoration: none;
+  color: var(--font-clr);
+  padding: 0.8em 4em;
+  position: relative;
+  margin-top: 3em;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: translateZ(0.1rem);
+          transform: translateZ(0.1rem);
+  z-index: 1;
+}
+
+.card__btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid var(--font-clr);
+  -webkit-transform: var(--level-one);
+          transform: var(--level-one);
+}
+
+.card__btn:hover .btn-deco2 {
+  --spacer: 0.6em;
+  width: 100%;
+  opacity: 1;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
+}
+
+.btn-deco {
+  position: absolute;
+  --spacer: 0.6em;
+  top: var(--spacer);
+  bottom: var(--spacer);
+  left: var(--spacer);
+  right: var(--spacer);
+  border: 2px solid var(--font-clr);
+  z-index: -1;
+}
+
+.btn-deco2 {
+  position: absolute;
+  --spacer: 0.6em;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  background: limegreen;
+  opacity: 0;
+}
+/*# sourceMappingURL=mix.css.map */
