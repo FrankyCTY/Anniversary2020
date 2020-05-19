@@ -1,0 +1,14 @@
+.body--restaurant {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5b5656;
+}
+
+.restaurant-page1 {
+  background: url(../img/main/hero.jpg);
+  width: 100vw;
+  height: 50vh;
+  background-size: cover;
+}

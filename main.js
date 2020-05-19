@@ -4,7 +4,10 @@
 
 //============================ Initial animations ============================
 
-const initialTl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+function whatsappInit() {
+  const initialTl = gsap.timeline({ defaults: { ease: "power2.inOut" } });
+  initialTl.from("svg", 1.5, { opacity: "0", scale: "0.2", stagger: 0.2 });
+}
 
 //============================ Event Listeners ============================
 
@@ -45,5 +48,3 @@ function activeAnimations() {
     this.children[0].classList.add("active");
   });
 }
-
-activeAnimations();
