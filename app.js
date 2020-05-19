@@ -38,5 +38,3 @@ function countDown() {
 }
 
 countDown();
-
-//Main html
