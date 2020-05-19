@@ -1,0 +1,8 @@
+<svg width="228" height="33" viewBox="0 0 228 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="venusText">
+<rect id="Rectangle 2" x="21.7283" width="206.272" height="33" rx="11" fill="#3D3D3F"/>
+<text id="time--2" fill="#868688" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="12" letter-spacing="0em"><tspan x="178.545" y="25.1016">2:26 PM</tspan></text>
+<path id="assist" d="M27.7951 30L1 31L17.1004 22.8889L27.7951 18V30Z" fill="#3D3D3F" stroke="#3D3D3F"/>
+<text id="venus-text" fill="white" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="18" letter-spacing="0em"><tspan x="31.6623" y="23.6523">&#x7121;&#x6240;&#x8b02; &#x4f60;&#x63c0;&#x1f61a;&#x1f61a;</tspan></text>
+</g>
+</svg>

@@ -5,7 +5,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,700");
+
 :root {
   --level-one: translateZ(3rem);
   --level-two: translateZ(6rem);
@@ -19,8 +19,6 @@
 
   --card-width: min(500px, 80%);
   --card-height: 70vh;
-
-  font-family: "Oswald", sans-serif;
 }
 
 .body--index {
@@ -29,6 +27,7 @@
   place-items: center;
 
   color: var(--font-clr);
+  font-family: "Oswald", sans-serif;
 }
 
 .flip-card {
@@ -100,6 +99,10 @@
   transform: rotateY(0.5turn);
   color: var(--clr);
   background: #b7c9e5;
+  background-image: url(../img/card.jpg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-position: -200px 0px;
 }
 
 .card__title {
