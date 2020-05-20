@@ -74,8 +74,10 @@
 .card-front {
   background: var(--clr);
   //   background: #f468b1;
-  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+  // background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/308367/fair.jpg);
+  background-image: url(../img/IMG-20190106-WA0082.jpg);
   background-size: cover;
+  background-position: 70% 100%;
   background-blend-mode: overlay;
   //   background-blend-mode: screen;
 
