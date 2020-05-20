@@ -19,6 +19,9 @@ barba.init({
     {
       namespace: "restaurant",
       beforeEnter() {
+        foodEvent();
+        autoDisplay();
+        restaurantScrollMagic();
         document.body.className = "";
         document.body.classList.add("body--restaurant");
       },

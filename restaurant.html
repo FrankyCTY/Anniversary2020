@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="./sass/mix.css" />
 
     <!-- restaurant js  -->
-    <script src="restaurant.js" defer></script>
+    <script src="restaurant.js" type="module" defer></script>
 
     <!-- transition js -->
-    <script src="./transition.js" defer></script>
+    <!-- <script src="./transition.js" defer></script> -->
 
     <!-- font-awesome -->
     <link
@@ -32,17 +32,19 @@
 
     <!-- Scroll Magic Add Indicators  -->
     <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
       src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
       integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
       crossorigin="anonymous"
     ></script>
-
-    <!-- Scroll Magic Min  -->
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
-      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
       crossorigin="anonymous"
-      defer
     ></script>
 
     <!-- GSAP MIN  -->
@@ -65,9 +67,74 @@
       data-barba="container"
       data-barba-namespace="restaurant"
     >
-      <section class="restaurant-page1"></section>
-      <section class="restaurant-page2"></section>
-      <section class="restaurant-page3"></section>
+      <header class="header--restaurant">
+        <a href="./main.html">
+          <svg
+            id="svg-previous"
+            width="15"
+            height="25"
+            viewBox="0 0 15 25"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="previous"
+              d="M5.04 12.505l9.552-9.353c.263-.256.408-.6.408-.966 0-.367-.145-.71-.408-.967l-.837-.82A1.4 1.4 0 0012.768 0a1.4 1.4 0 00-.988.4L.407 11.535a1.342 1.342 0 00-.407.97c-.001.368.143.712.407.97L11.77 24.6c.262.258.613.4.987.4s.725-.142.988-.4l.837-.819a1.349 1.349 0 000-1.934L5.04 12.505z"
+              fill="#2CA2FF"
+            />
+          </svg>
+        </a>
+        <div class="whatsapp-details">
+          <p class="profile-name">VenVen💕💕</p>
+          <p class="date date--restaurant">21/05/20, 8:00PM</p>
+        </div>
+        <span>All Media</span>
+      </header>
+      <section class="restaurant-page1 slide">
+        <div class="hero"><p class="hero-title">One Tree Grill</p></div>
+      </section>
+      <section class="restaurant-page2 slide">
+        <div class="display">
+          <img
+            class="display-img displayed"
+            id="beef"
+            src="./img/main/beef.jpg"
+            alt=""
+          />
+          <img
+            class="display-img"
+            id="beverage"
+            src="./img/main/beverage.jpg"
+            alt=""
+          />
+          <img class="display-img" id="lamb" src="./img/main/lamb.jpg" alt="" />
+          <img
+            class="display-img"
+            id="oyster"
+            src="./img/main/oyster.jpg"
+            alt=""
+          />
+        </div>
+        <div class="img-pool">
+          <div class="img-box" data-target="#beef">
+            <img src="./img/main/beef.jpg" alt="" class="food food--1 active" />
+            <div class="img-border active"></div>
+          </div>
+          <div class="img-box" data-target="#beverage">
+            <img src="./img/main/beverage.jpg" alt="" class="food food--1" />
+            <div class="img-border"></div>
+          </div>
+          <div class="img-box" data-target="#lamb">
+            <img src="./img/main/lamb.jpg" alt="" class="food food--1" />
+            <div class="img-border"></div>
+          </div>
+          <div class="img-box" data-target="#oyster">
+            <img src="./img/main/oyster.jpg" alt="" class="food food--1" />
+            <div class="img-border"></div>
+          </div>
+        </div>
+      </section>
+      <section class="restaurant-page3 slide"></section>
     </main>
     <div class="tranDiv">
       <div class="pageTranDiv"></div>

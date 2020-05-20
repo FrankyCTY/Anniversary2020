@@ -4,11 +4,175 @@
   justify-content: center;
   align-items: center;
   background: #5b5656;
+  font-family: "Oswald", sans-serif;
 }
 
-.restaurant-page1 {
-  background: url(../img/main/hero.jpg);
+//================================
+//Layout
+//================================
+
+.slide {
+  min-height: 100vh;
   width: 100vw;
+  display: flex;
+}
+
+// ================================== header--restaurant ===================================
+.header--restaurant {
+  --wtsap-bg: #171717;
+  font-family: sans-serif;
+  background: var(--wtsap-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+
+  span {
+    color: #2ca2ff;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    font-size: clamp(0.8rem, 1vw, 1rem);
+  }
+}
+
+.whatsapp-details {
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.date--restaurant {
+  font-size: 0.6rem;
+  color: white;
+}
+
+// ===================================== page 1 =====================================
+.restaurant-page1 {
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  background: #b7c9e5;
+  background-image: url(../img/main/hero.jpg);
+  background-blend-mode: multiply;
+  width: 100%;
   height: 50vh;
   background-size: cover;
+
+  display: grid;
+  place-items: center;
 }
+
+.hero-title {
+  font-size: clamp(2rem, 4vw, 8rem);
+  color: #e5e5e5;
+  opacity: 0.8;
+
+  letter-spacing: 4px;
+  -webkit-animation: heroTitle 3s ease;
+  animation: heroTitle 3s ease;
+  text-transform: uppercase;
+}
+
+@-webkit-keyframes heroTitle {
+  from {
+    letter-spacing: 8px;
+  }
+  to {
+    letter-spacing: 4px;
+  }
+}
+
+@keyframes heroTitle {
+  from {
+    letter-spacing: 8px;
+  }
+  to {
+    letter-spacing: 4px;
+  }
+}
+
+// ===================================== page 2 =====================================
+.restaurant-page2 {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  // border: 2px solid;
+}
+.display {
+  width: 100vw;
+  max-width: 1000px;
+  height: 40vh;
+
+  position: relative;
+}
+.display-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;
+
+  &.displayed {
+    transition: all 250ms ease-in-out;
+    opacity: 1;
+  }
+}
+
+.img-box {
+  --size: 2.5rem;
+  width: var(--size);
+  height: var(--size);
+
+  z-index: 1;
+
+  position: relative;
+
+  cursor: pointer;
+}
+
+.food {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50px;
+}
+
+.img-border {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  // height: 100%;
+  // width: 100%;
+  border-radius: 50px;
+
+  &.active {
+    transition: all 250ms ease-in-out;
+    background: #40bad5;
+    opacity: 0.6;
+    z-index: -1;
+  }
+}
+
+.food.active {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  transition: all 250ms ease-in-out;
+}
+
+.img-pool {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 3em;
+  display: flex;
+  justify-content: space-around;
+}
+// ===================================== page 3 =====================================
