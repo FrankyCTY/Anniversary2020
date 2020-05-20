@@ -17,6 +17,10 @@
   display: flex;
 }
 
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
 // ================================== header--restaurant ===================================
 .header--restaurant {
   --wtsap-bg: #171717;
@@ -93,7 +97,8 @@
 }
 
 // ===================================== page 2 =====================================
-.restaurant-page2 {
+.restaurant-page2,
+.restaurant-page3 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -176,3 +181,11 @@
   justify-content: space-around;
 }
 // ===================================== page 3 =====================================
+
+.restaurant-page3 {
+  background: #e5e5e5;
+  background-image: url(../img/main/page3.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: left;
+}

@@ -1493,6 +1493,10 @@ svg {
   display: flex;
 }
 
+.scrollmagic-pin-spacer {
+  position: static !important;
+}
+
 .header--restaurant {
   --wtsap-bg: #171717;
   font-family: sans-serif;
@@ -1575,7 +1579,8 @@ svg {
   }
 }
 
-.restaurant-page2 {
+.restaurant-page2,
+.restaurant-page3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1662,5 +1667,13 @@ svg {
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+}
+
+.restaurant-page3 {
+  background: #e5e5e5;
+  background-image: url(../img/main/page3.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-position: left;
 }
 /*# sourceMappingURL=mix.css.map */

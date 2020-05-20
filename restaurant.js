@@ -111,7 +111,7 @@ function restaurantScrollMagic() {
 // restaurantScrollMagic();
 
 // ================ Page Transition =================
-
+// foodEvent();
 barba.hooks.enter(() => {
   window.scrollTo(0, 0);
 });
